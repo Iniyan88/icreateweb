@@ -11,7 +11,11 @@ const Dashboard = () => {
     fData();
   }, []);
   console.log("Dashboard -> data", data);
-  return <div>{data.name}</div>;
+  return (
+    <div className="flex justify-center align-bottom text-right">
+      {data.name}
+    </div>
+  );
 };
 
 export default Dashboard;

@@ -5,19 +5,16 @@ import {
   avatars,
   database,
 } from "./appwrite/appwriteConfig";
-import Api from "./apis/Api";
 import { ID, Permission, Query, Role } from "appwrite";
 const Login = () => {
-  async function handleSignIn(e) {
-    e.preventDefault();
-    const res = await account.createOAuth2Session(
+  async function handleSignIn() {
+    const res = account.createOAuth2Session(
       "google",
       "http://localhost:3000/dashboard",
       "http://localhost:3000/"
     );
-
-    const user = await Api();
-    const avatarUrl = avatars.getInitials(user.name);
+    const user = await account.get();
+    const avatarUrl = await avatars.getInitials(user.name);
     console.log(avatarUrl);
     const userDetails = {
       accountId: user.$id,
@@ -40,14 +37,15 @@ const Login = () => {
       );
       return newUser;
     }
-    console.log(result.documents[0]);
+
+    return res;
   }
   return (
     <div className="min-h-screen flex items-center justify-center bg-black">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
         <h1 className="text-3xl font-semibold mb-4 text-center">Login</h1>
         <button
-          onClick={(e) => handleSignIn(e)}
+          onClick={handleSignIn}
           className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
         >
           Login with Google

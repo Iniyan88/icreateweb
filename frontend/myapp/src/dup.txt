@@ -1,0 +1,5 @@
+ <div className="flex flex-wrap -mx-4">
+        {filteredData.map((card) => (
+          <Card key={card.id} title={card.title} />
+        ))}
+      </div>

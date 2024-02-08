@@ -2,8 +2,7 @@
 
 import React, { useState } from "react";
 import Card from "../componenets/Card";
-import { Link } from "react-router-dom";
-import sampleData from "../../data/Data";
+import sampleData from "../data/Data";
 const WebDev = () => {
   // Sample data for demonstration
 
@@ -22,10 +21,9 @@ const WebDev = () => {
     );
     setFilteredData(filteredCards);
   };
-
   return (
     <div className="container mx-auto mt-8 px-4">
-      <h1 className="text-3xl font-bold mb-4">Main Content</h1>
+      <h1 className="text-3xl font-bold mb-4">Type Something da</h1>
       <div className="mb-4">
         <input
           type="text"
@@ -38,12 +36,14 @@ const WebDev = () => {
       <ul className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-7 max-w-5xl">
         {filteredData.map((card) => (
           <li key={card.id} className="relative min-w-20 w-80 h-60">
-            <Link
-              to="/notes"
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href={card.link}
               className="flex rounded-[24px] border border-dark-4 overflow-hidden cursor-pointer w-full h-full"
             >
               <Card key={card.id} title={card.title} />
-            </Link>
+            </a>
           </li>
         ))}
       </ul>

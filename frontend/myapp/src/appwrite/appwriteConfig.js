@@ -3,6 +3,7 @@ export const appwriteConfig = {
   databaseId: "65bf176fc0223f74a827",
   storageId: "",
   userCollectionId: "65bf1b92d330c22fc161",
+  contactCollectionId: "65c30d2ef3198a2680a2",
 };
 const client = new Client();
 client

@@ -8,13 +8,18 @@ import {
 import { ID, Permission, Query, Role } from "appwrite";
 const Login = () => {
   async function handleSignIn() {
-    const res = account.createOAuth2Session(
-      "google",
-      "http://localhost:3000/dashboard",
-      "http://localhost:3000/"
-    );
+    try {
+      const res = account.createOAuth2Session(
+        "google",
+        "http://localhost:3000/dashboard",
+        "http://localhost:3000/"
+      );
+      return res;
+    } catch {
+      console.log("error");
+    }
     const user = await account.get();
-    const avatarUrl = await avatars.getInitials(user.name);
+    const avatarUrl = avatars.getInitials(user.name);
     console.log(avatarUrl);
     const userDetails = {
       accountId: user.$id,
@@ -37,8 +42,6 @@ const Login = () => {
       );
       return newUser;
     }
-
-    return res;
   }
   return (
     <div className="min-h-screen flex items-center justify-center bg-black">

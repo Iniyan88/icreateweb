@@ -28,7 +28,7 @@ const MainLayout = () => {
     fData();
   }, [navigate]);
   return (
-    <div className="w-full h-full  md:flex">
+    <div className="md:flex">
       <TopBar data={data} />
       <LeftBar data={data} />
       <section

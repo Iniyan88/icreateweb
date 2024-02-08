@@ -3,23 +3,13 @@
 import React, { useState } from "react";
 import Card from "../componenets/Card";
 import { Link } from "react-router-dom";
+import { programming } from "../data/Data";
+
 const Programming = () => {
   // Sample data for demonstration
-  const sampleData = [
-    { id: 1, title: "Card 1" },
-    { id: 2, title: "Card 2" },
-    { id: 3, title: "Card 3" },
-    { id: 4, title: "Card 4" },
-    { id: 5, title: "Card 5" },
-    { id: 6, title: "Card 6" },
-    { id: 7, title: "Card 7" },
-    { id: 8, title: "Card 8" },
-    { id: 9, title: "Card 9" },
-    { id: 10, title: "Card 10" },
-  ];
 
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredData, setFilteredData] = useState(sampleData);
+  const [filteredData, setFilteredData] = useState(programming);
 
   const handleSearchChange = (event) => {
     const searchValue = event.target.value;
@@ -28,7 +18,7 @@ const Programming = () => {
   };
 
   const filterCards = (searchValue) => {
-    const filteredCards = sampleData.filter((card) =>
+    const filteredCards = programming.filter((card) =>
       card.title.toLowerCase().includes(searchValue.toLowerCase())
     );
     setFilteredData(filteredCards);
@@ -36,7 +26,7 @@ const Programming = () => {
 
   return (
     <div className="container mx-auto mt-8 px-4">
-      <h1 className="text-3xl font-bold mb-4">Main Content</h1>
+      <h1 className="text-3xl font-bold mb-4">Search Karo</h1>
       <div className="mb-4">
         <input
           type="text"

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Materials = () => {
   return (
     <div className="container mx-auto mt-8">
-      <h1 className="text-3xl font-bold mb-4">Main Content</h1>
+      <h1 className="text-3xl font-bold mb-4">Study Materials</h1>
       <div className="flex flex-col space-y-4">
         <Link to="/web" className="text-blue-500 hover:underline">
           web Development

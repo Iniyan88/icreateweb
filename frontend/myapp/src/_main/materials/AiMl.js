@@ -1,10 +1,7 @@
-// AiMl.js
-
 import React, { useState } from "react";
 import Card from "../componenets/Card";
 import { Link } from "react-router-dom";
 const AiMl = () => {
-  // Sample data for demonstration
   const sampleData = [
     { id: 1, title: "Card 1" },
     { id: 2, title: "Card 2" },
@@ -36,7 +33,7 @@ const AiMl = () => {
 
   return (
     <div className="container mx-auto mt-8 px-4">
-      <h1 className="text-3xl font-bold mb-4">Main Content</h1>
+      <h1 className="text-3xl font-bold mb-4">Search da bot uh</h1>
       <div className="mb-4">
         <input
           type="text"

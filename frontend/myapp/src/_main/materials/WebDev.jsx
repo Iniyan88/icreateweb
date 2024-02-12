@@ -1,11 +1,7 @@
-// WebDev.js
-
 import React, { useState } from "react";
 import Card from "../componenets/Card";
 import sampleData from "../data/Data";
 const WebDev = () => {
-  // Sample data for demonstration
-
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredData, setFilteredData] = useState(sampleData);
 
@@ -27,7 +23,7 @@ const WebDev = () => {
       <div className="mb-4">
         <input
           type="text"
-          placeholder="Search by title..."
+          placeholder="Search"
           className="w-full px-4 py-2 border rounded"
           value={searchTerm}
           onChange={handleSearchChange}
@@ -40,7 +36,7 @@ const WebDev = () => {
               rel="noreferrer"
               target="_blank"
               href={card.link}
-              className="flex rounded-[24px] border border-dark-4 overflow-hidden cursor-pointer w-full h-full"
+              className="flex rounded-[24px] border border-dark-4 overflow-hidden cursor-pointer w-full h-full relative"
             >
               <Card key={card.id} title={card.title} />
             </a>

@@ -1,13 +1,9 @@
-// Programming.js
-
 import React, { useState } from "react";
 import Card from "../componenets/Card";
 import { Link } from "react-router-dom";
 import { programming } from "../data/Data";
 
 const Programming = () => {
-  // Sample data for demonstration
-
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredData, setFilteredData] = useState(programming);
 
@@ -45,6 +41,19 @@ const Programming = () => {
             >
               <Card key={card.id} title={card.title} />
             </Link>
+            <div className="absolute bottom-0 p-5 flex-between w-full bg-gradient-to-t from-dark-3 to-transparent rounded-b-[24px] gap-2">
+              {
+                <div className="flex items-center justify-start gap-2  flex-1">
+                  <img
+                    src="star.svg"
+                    alt="star"
+                    height={24}
+                    width={24}
+                    className="cursor-pointer"
+                  />
+                </div>
+              }
+            </div>
           </li>
         ))}
       </ul>

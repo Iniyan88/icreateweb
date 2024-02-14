@@ -28,11 +28,11 @@ const MainLayout = () => {
     fData();
   }, [navigate]);
   return (
-    <div className="md:flex">
+    <div className=" md:flex">
       <TopBar data={data} />
       <LeftBar data={data} />
       <section
-        className="flex flex-1"
+        className=" flex flex-1"
         // style={{
         //   backgroundImage: "url('bg.jpg')",
         //   backgroundSize: "cover",

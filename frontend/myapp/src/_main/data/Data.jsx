@@ -3,11 +3,13 @@ const sampleData = [
     id: 1,
     title: "JavaScript",
     link: " https://mega.nz/folder/ohRiELpY#wjvmJY3xKPLuFbbM6VxcQg",
+    star: false,
   },
   {
     id: 2,
     title: " Node.js",
     link: " https://mega.nz/folder/AtYWCZjK#hLOTRFl7d2WLWdSjVkO14A",
+    star: false,
   },
   {
     id: 3,
@@ -65,51 +67,61 @@ const programming = [
     id: 1,
     title: "C++",
     link: "https://drive.google.com/drive/folders/1Solrbu_nqH72D8Pe-ZhSUB-5D9_Tt0He",
+    isStarred: false,
   },
   {
     id: 2,
     title: "C",
     link: "https://drive.google.com/drive/folders/1eFrcmdSV0GIufCO3gHArp8cXwpUCTtQo",
+    isStarred: false,
   },
   {
     id: 3,
     title: "Python",
     link: "https://mega.nz/folder/aAJTGYAK#poMbhTDEKZLHSmxXe_OZBA",
+    isStarred: false,
   },
   {
     id: 4,
     title: "Java",
     link: "https://drive.google.com/drive/folders/1IP7B7lhrRq6et72RGUVeLibe8yfvnq9i",
+    isStarred: false,
   },
   {
     id: 5,
     title: "C#",
     link: "https://drive.google.com/drive/folders/1s8aVU6DfDyO-ufG4mlFvoNrvq8WjXeCS",
+    isStarred: false,
   },
   {
     id: 6,
     title: "Rust",
     link: "https://mega.nz/folder/5pQSiZLC#qgH93xIvrQGDfsihmzmdBQ",
+    isStarred: false,
   },
   {
     id: 7,
     title: "DataScience",
     link: "https://mega.nz/folder/5Wp3nIiD#qsenYaT31KWhSEGGEAzOAQ",
+    isStarred: false,
   },
   {
     id: 8,
     title: "Ruby",
     link: "https://mega.nz/folder/5pQSiZLC#qgH93xIvrQGDfsihmzmdBQ",
+    isStarred: false,
   },
   {
     id: 9,
     title: "Kotlin",
     link: "https://mega.nz/folder/5pQSiZLC#qgH93xIvrQGDfsihmzmdBQ",
+    isStarred: false,
   },
   {
     id: 10,
     title: "LeetCodeQuestions",
     link: "https://drive.google.com/folderview?id=1B6pRzacEGqjnVS3B8cglBvaLGfCdgLnl",
+    isStarred: false,
   },
 ];
 export default sampleData;

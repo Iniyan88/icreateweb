@@ -12,7 +12,7 @@ const LeftBar = (data) => {
     navigate("/");
   }
   return (
-    <nav className="sticky top-0 hidden md:flex h-full px-6 py-10 flex-col min-w-[270px] bg-black">
+    <nav className="sticky top-0 hidden md:flex  px-6 py-10 flex-col min-w-[270px] bg-black">
       <div className="flex flex-col gap-11 mt-11">
         <Link to="/" className="flex  gap-5 items-center">
           <img

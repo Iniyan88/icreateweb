@@ -4,7 +4,6 @@ import {
   appwriteConfig,
   database,
 } from "../../appwrite/appwriteConfig";
-
 export async function Api() {
   const data = await account.get();
   return data;
@@ -24,8 +23,24 @@ export async function saveContact(data) {
     appwriteConfig.databaseId,
     appwriteConfig.contactCollectionId,
     ID.unique(),
-
     contactInfo
   );
   return saveContact;
+}
+export async function saveCard(data) {
+  console.log(data);
+  console.log(data.isStarred);
+  const CardInfo = {
+    starred: data.isStarred,
+    title: data.title,
+    link: data.link,
+    courseid: data.id,
+  };
+  const saveCardDetails = await database.createDocument(
+    appwriteConfig.databaseId,
+    appwriteConfig.starCollectionId,
+    ID.unique(),
+    CardInfo
+  );
+  return saveCardDetails;
 }

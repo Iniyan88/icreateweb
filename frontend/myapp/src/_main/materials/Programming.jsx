@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Card from "../componenets/Card";
 import { Link } from "react-router-dom";
 import { programming } from "../data/Data";
+import { saveCard } from "../apis/Api";
 
 const Programming = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -45,10 +46,15 @@ const Programming = () => {
               {
                 <div className="flex items-center justify-start gap-2  flex-1">
                   <img
-                    src="star.svg"
+                    src={card.isStarred ? "/starred.svg" : "/star.svg"}
                     alt="star"
                     height={24}
                     width={24}
+                    onClick={() => {
+                      card.isStarred = !card.isStarred;
+                      setFilteredData([...filteredData, card.id]);
+                      saveCard(card);
+                    }}
                     className="cursor-pointer"
                   />
                 </div>

@@ -4,6 +4,7 @@ export const appwriteConfig = {
   storageId: "",
   userCollectionId: "65bf1b92d330c22fc161",
   contactCollectionId: "65c30d2ef3198a2680a2",
+  starCollectionId: "65caeda18b783031ca6a",
 };
 const client = new Client();
 client

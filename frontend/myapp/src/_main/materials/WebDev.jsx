@@ -10,7 +10,6 @@ const WebDev = () => {
     setSearchTerm(searchValue);
     filterCards(searchValue);
   };
-
   const filterCards = (searchValue) => {
     const filteredCards = sampleData.filter((card) =>
       card.title.toLowerCase().includes(searchValue.toLowerCase())

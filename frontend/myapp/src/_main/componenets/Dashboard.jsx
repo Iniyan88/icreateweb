@@ -1,5 +1,5 @@
 import React from "react";
-import "animate.css";
+// import "animate.css";
 const Dashboard = () => {
   return (
     <div className="w-full">

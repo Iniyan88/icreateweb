@@ -195,7 +195,7 @@ const LeftBar = (data) => {
             className="text-slate-100 flex gap-4 w-full bg-gray-600 rounded-full items-center justify-start hover:bg-transparent hover:text-white"
           >
             {isLogging ? (
-              "Logging out..."
+              "pls wait.."
             ) : (
               <svg
                 xmlns="http://www.w3.org/2000/svg"

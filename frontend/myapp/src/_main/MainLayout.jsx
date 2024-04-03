@@ -31,13 +31,7 @@ const MainLayout = () => {
     <div className=" md:flex">
       <TopBar data={data} />
       <LeftBar data={data} />
-      <section
-        className=" flex flex-1"
-        // style={{
-        //   backgroundImage: "url('bg.jpg')",
-        //   backgroundSize: "cover",
-        // }}
-      >
+      <section className=" flex flex-1">
         <Outlet />
       </section>
       <BottomBar />

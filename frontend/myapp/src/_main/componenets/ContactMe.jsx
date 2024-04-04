@@ -39,7 +39,7 @@ const ContactMe = () => {
               <div className="block pl-2 font-semibold text-xl self-start text-gray-700">
                 <h2 className="leading-relaxed">Get in touch</h2>
                 <p className="text-sm text-gray-500 font-normal leading-relaxed">
-                  We are always here to help you
+                  We are here to help ! Fill out the form below and we will get
                 </p>
               </div>
             </div>

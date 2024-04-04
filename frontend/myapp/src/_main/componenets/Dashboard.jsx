@@ -33,7 +33,10 @@ const Dashboard = () => {
             <h2 className="text-xl font-semibold text-white">Notes!!</h2>
           </div>
           <p className="text-center mt-8 text-gray-700">
-            Access these courses in the Materials section
+            Access these courses in the{" "}
+            <span className="font-bold text-xl font-mono text-slate-900">
+              Materials Section
+            </span>
           </p>
         </div>
       </div>
